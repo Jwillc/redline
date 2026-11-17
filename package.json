@@ -1,0 +1,25 @@
+{
+  "name": "redline",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5347 --strictPort",
+    "build": "bun run wasm && tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "bun test tests",
+    "typecheck": "tsc --noEmit",
+    "wasm": "cargo build -p chimera-wasm --release --target wasm32-unknown-unknown && cp target/wasm32-unknown-unknown/release/chimera_wasm.wasm src/chimera/wasm/chimera.wasm"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.4",
+    "@types/three": "0.186.0",
+    "playwright-core": "1.64.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.6"
+  },
+  "license": "MIT"
+}

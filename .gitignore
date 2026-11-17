@@ -1,0 +1,7 @@
+node_modules/
+dist/
+target/
+out/
+.DS_Store
+# music for the films is yours to add locally; it never goes in the repo
+public/music/
