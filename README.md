@@ -5,6 +5,10 @@ from a running model of the engine: cylinders filling and firing, valves opening
 travelling down the exhaust pipes and out of the tailpipe. Put that engine in a car with real-ish
 physics, drive it around, and listen.
 
+[![The REDLINE trailer: every sound in it comes from the simulated engines](media/redline-trailer.jpg)](media/redline-trailer.mp4)
+
+**[Watch the trailer](media/redline-trailer.mp4)** (64 s, with sound; every engine note in it is simulated).
+
 ## Credit where it's due
 
 REDLINE adds on to other people's work. It isn't a remix of it, and it isn't trying to take credit for
