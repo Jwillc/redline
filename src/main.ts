@@ -177,11 +177,9 @@ pickSetup(SETUPS.find(s => s.id === OWN[world.track.id]?.[0]) ?? SETUPS[0], true
 car.reset(world.start.x, world.start.z, world.start.yaw, spec.idle, world.height(world.start.x, world.start.z))
 
 function pickTrack(id: string) {
-  const wasOwn = !!OWN[world.track.id]
+  // the engine and car stay as picked: any engine, any car, any world (a world's own car and engine,
+  // OWN, is only where a page opened straight onto that world starts)
   world = new World(id)
-  const own = OWN[id]
-  if (own) { pickSetup(SETUPS.find(s => s.id === own[0])!, true); pickEngine(ENGINES.find(e => e.id === own[1])!) }
-  else if (wasOwn) pickSetup(SETUPS[0], true)
   drift.total = 0; drift.best = 0; drift.combo = 0; drift.time = 0
   view.buildWorld(world)
   repair(true)

@@ -298,7 +298,7 @@ export class Director {
     let t = shot({
       len: 11,
       setup: S => {
-        S.pickTrack('hood')
+        S.pickTrack('hood'); S.pickEngine('pinto'); S.pickSetup('pinto')
         S.setDummy(false); S.showFigure(true); S.view.dummy.look = 'person'
         const H = S.world.hood!
         const parkedNear = (z: number) => S.world.blocks.some(b => b.kind === 'parked' && Math.abs(b.x + 3.65) < 1.5 && Math.abs(b.z - z) < 9)
