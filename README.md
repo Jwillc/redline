@@ -5,8 +5,23 @@ from a running model of the engine: cylinders filling and firing, valves opening
 travelling down the exhaust pipes and out of the tailpipe. Put that engine in a car with real-ish
 physics, drive it around, and listen.
 
-Inspired by **Joel Johnson's Engine Synthesizer** (joeljohnson.com/enginesynth). This is not his code:
-the engine model here was written from scratch for REDLINE.
+## Credit where it's due
+
+REDLINE adds on to other people's work. It isn't a remix of it, and it isn't trying to take credit for
+it. If you came here for those projects, go to the originals:
+
+- **The engine synth idea: Joel Johnson's Engine Synthesizer**, https://joeljohnson.com/enginesynth.
+  Hearing a simulated engine instead of recordings is his idea, and REDLINE exists because of it. His
+  code isn't public and none of it is in this repo; REDLINE's engine model is its own version, written
+  from scratch. Not affiliated with or endorsed by him.
+- **The Chimera voice and head: Jameson Hodge's CHIMERA**, https://github.com/jamesondh/chimera-vocal-synth.
+  The code in `crates/` and `src/chimera/` is his, copied from his repo under its MIT license (an
+  earlier snapshot; his repo has moved on since, so get the current version there). Not affiliated with
+  or endorsed by him.
+
+What REDLINE adds around them: the cars and their bodies, the car physics (tyres, suspension, clutch,
+gearbox, diffs, crashes and rollovers), the worlds and levels, the engines' specs (including a stock
+1970s Ford Pinto), and the scripted films with their recorder.
 
 ## What's in it
 
@@ -100,8 +115,8 @@ Improvements welcome, especially real cam and valve data.
 
 ## Credits
 
-- Engine-synth idea: Joel Johnson's Engine Synthesizer.
-- CHIMERA vocal synth: Jameson Hodge, github.com/jamesondh/chimera-vocal-synth (MIT).
+- Engine-synth idea: Joel Johnson's Engine Synthesizer, https://joeljohnson.com/enginesynth.
+- CHIMERA vocal synth: Jameson Hodge, https://github.com/jamesondh/chimera-vocal-synth (MIT).
 - 1971 Ford Pinto photo in the Pinto film: "1971 Ford Pinto Runabout" by Mustang Joe, Wikimedia
   Commons, CC0.
 
