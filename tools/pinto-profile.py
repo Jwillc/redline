@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.11"
+# dependencies = ["numpy", "scipy"]
+# ///
+# Usage: uv run tools/pinto-profile.py [--mic] <recording.wav> [more.wav ...]
+#   Compare recordings of a real engine with renders from tools/pintoref.ts (mono 16-bit WAVs).
+#   --mic takes out the low rumble a phone microphone doesn't pick up. Bring your own recordings:
+#   none are included in this repo.
 # Steady stretches of an engine recording: where the firing frequency holds for 3 s, in an idle band
 # and a revving band; their average third-octave spectrum (dB relative to the loudest band, 100 Hz
 # to 8 kHz) and how strongly the 1-4 kHz band pulses at the firing rate (the "buzz").

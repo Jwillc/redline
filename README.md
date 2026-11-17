@@ -27,9 +27,16 @@ the engine model here was written from scratch for REDLINE.
 - **CHIMERA** (`crates/`, `src/chimera/`): Jameson Hodge's vocal synth, used for the Chimera head on
   the driver.
 
-## Run it
+## What you need
 
-Needs [Bun](https://bun.sh). The CHIMERA WebAssembly is checked in, so Rust is only needed to rebuild it.
+| For | Install |
+|---|---|
+| Playing it, the tools, the tests | [Bun](https://bun.sh) 1.4 or later |
+| Rendering the films to MP4 | [ffmpeg](https://ffmpeg.org), and the Chromium the recorder drives: `bunx playwright install chromium` |
+| The Python tools (music mix, spectrum compare) | [uv](https://docs.astral.sh/uv/) (it fetches numpy and scipy itself) |
+| Rebuilding the CHIMERA WebAssembly (optional; the built `chimera.wasm` is checked in) | Rust with `rustup target add wasm32-unknown-unknown` |
+
+## Run it
 
 ```bash
 bun install
@@ -67,11 +74,22 @@ Open `http://127.0.0.1:5347/` and click START ENGINE. Pick a world with `?track=
   rights to with `uv run tools/mixmusic.py out/pinto-film <file>`, or play it live with
   `&music=/music/<file>` after putting it in `public/music/` (ignored by git).
 
+## Check a change
+
+```bash
+bun run typecheck
+bun run test       # every engine idles and makes sound; the Pinto's 0-100, one-wheel peel, locked-rear burnout
+bun run build      # rebuilds the WebAssembly (needs Rust), typechecks, bundles to dist/
+```
+
 ## Tools
 
 Headless checks in `tools/`: `drive.ts` (0-60, shifts), `donut.ts`, `burnout.ts`, `driftcheck.ts`,
 `course.ts`, `rollsearch.ts` (finds a natural rollover), `calibrate.ts` (levels per engine),
-`pintoref.ts` and `pinto-profile.py` (compare the Pinto's spectrum against recordings).
+`pintoref.ts` renders the Pinto in the conditions of reference recordings and `pinto-profile.py` compares
+the two spectra (`bun tools/pintoref.ts out/pintoref`, then `uv run tools/pinto-profile.py --mic <your
+recordings> out/pintoref/*.wav`). The recordings the Pinto was tuned against aren't included (they're
+other people's videos); bring your own of a stock Pinto idling and revving.
 
 ## How accurate is the Pinto?
 
