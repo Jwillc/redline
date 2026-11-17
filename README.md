@@ -19,6 +19,15 @@ it. If you came here for those projects, go to the originals:
   earlier snapshot; his repo has moved on since, so get the current version there). Not affiliated with
   or endorsed by him.
 
+**How this came about.** I saw Joel Johnson's Engine Synthesizer posted on X and wanted to put an engine
+like that in a car you can drive and crash. I thought it was a GitHub repo I could build on; it turned
+out to be a web demo with no public code. So the engine model here was written separately, inspired by
+what his demo does, and Jameson Hodge's CHIMERA (which is open source) was brought in for the Chimera
+driver. This is a non-commercial hobby project.
+
+**If you'd like this taken down**, Joel, Jameson, or anyone whose work is involved: open an issue on this
+repo and I'll take it down or change it, no questions asked.
+
 What REDLINE adds around them: the cars and their bodies, the car physics (tyres, suspension, clutch,
 gearbox, diffs, crashes and rollovers), the worlds and levels, the engines' specs (including a stock
 1970s Ford Pinto), and the scripted films with their recorder.
